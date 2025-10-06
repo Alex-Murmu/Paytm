@@ -63,7 +63,7 @@ JWT_SECRET=<Your_Secret_Key>
 
 npm start # or node index.js
 
-
+```
 Paytm/
 ├── backend/            # Server-side code (Node.js/Express.js)
 │   ├── routes/         # API endpoints
@@ -76,3 +76,4 @@ Paytm/
 │   └── public/
 │   └── ...
 └── .gitignore          # Specifies files to be ignored by Git
+```

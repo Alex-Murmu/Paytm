@@ -48,6 +48,13 @@ cd Paytm
 cd backend
 npm install  # or yarn install
 ```
+``` 
+cd frontend
+npm install 
+```
+
+# Create Enviroment file under both file Backned as well as in frontend
+
 in .env file 
 PORT=3000
 DATABASE_URL=<Your_MongoDB_or_other_DB_URI>

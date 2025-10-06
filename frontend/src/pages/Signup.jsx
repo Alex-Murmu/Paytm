@@ -6,6 +6,7 @@ import Heading from '../components/Heading'
 import SubHeading from '../components/SubHeading'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
+import ApiUrl from  ".../CentralApi.js"
 
 export default function Signup() {
     const nevigate = useNavigate();
@@ -41,7 +42,7 @@ export default function Signup() {
                     <Button onClick={async()=>{
                       try {
                         setLoading(true);
-                        const response = await fetch("http://localhost:2000/api/v1/user/signup",{
+                        const response = await fetch(`${ApiUrl}/api/v1/user/signup`,{
                           method:"POST",
                           headers:{"Content-Type":"application/json"},
                           body:JSON.stringify({ firstName:firstName,lastName:lastName,email:email,password:password })

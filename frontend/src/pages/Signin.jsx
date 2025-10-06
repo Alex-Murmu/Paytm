@@ -6,6 +6,7 @@ import InputBox from '../components/InputBox'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
+import ApiUrl from ".../CentralApi.js";
 
 export default function Signin() {
   const [email,setEmail] = useState("")
@@ -32,7 +33,7 @@ export default function Signin() {
               <Button onClick={async()=>{
                 try {
                   setLoading(true)
-                    const response = await fetch("http://localhost:2000/api/v1/user/signin",{
+                    const response = await fetch(`${ApiUrl}/api/v1/user/signin`,{
                   method:"POST",
                   headers:{
                     "Content-Type":"application/json",

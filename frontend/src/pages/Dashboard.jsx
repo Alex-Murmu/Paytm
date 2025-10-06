@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Appbar from '../components/Appbar'
 import Users from '../components/Users'
 import Balance from '../components/Balance'
-
+import ApiUrl from ".../CentralApi.js";
 export default function Dashboard() {
   const [balance, setBalance] = useState(0);
   const token = localStorage.getItem("token");
@@ -10,7 +10,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const response = await fetch("http://localhost:2000/api/v1/user/balance", {
+        const response = await fetch(`${ApiUrl}/api/v1/user/balance`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

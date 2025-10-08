@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Appbar from '../components/Appbar'
 import Users from '../components/Users'
 import Balance from '../components/Balance'
-import { BASE_URL } from '../config/apiConfig';
+const BASE_URL = process.env.BASE_URL;
 export default function Dashboard() {
   const [balance, setBalance] = useState(0);
   const token = localStorage.getItem("token");

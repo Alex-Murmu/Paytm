@@ -6,7 +6,7 @@ import Heading from '../components/Heading'
 import SubHeading from '../components/SubHeading'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 
 export default function Signup() {

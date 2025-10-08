@@ -3,7 +3,7 @@ import Button from './Button'
 import InputBox from './InputBox'
 import { useState } from 'react'
 import { useEffect } from 'react';
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 export default function Users({}) {
    const [Userinput,setUserInput] = useState("");

@@ -3,9 +3,15 @@ import Button from './Button'
 import InputBox from './InputBox'
 import { useState } from 'react'
 import { useEffect } from 'react';
+const BASE_URL = process.env.BASE_URL;
 
-export default function Users({users}) {
+export default function Users({}) {
+   const [Userinput,setUserInput] = useState("");
+   const [users,setUsers]= useState();
 
+    useEffect(async()=>{
+       const response = await fetch(`${BASE_URL}/api/v1/user/bulk`)       
+    })
  
   return (
     <div>

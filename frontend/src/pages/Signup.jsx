@@ -6,7 +6,8 @@ import Heading from '../components/Heading'
 import SubHeading from '../components/SubHeading'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
-import ApiUrl from  ".../CentralApi.js"
+const BASE_URL = process.env.BASE_URL;
+
 
 export default function Signup() {
     const nevigate = useNavigate();
@@ -41,8 +42,9 @@ export default function Signup() {
 
                     <Button onClick={async()=>{
                       try {
+                        console.log("bae", BASE_URL)
                         setLoading(true);
-                        const response = await fetch(`${ApiUrl}/api/v1/user/signup`,{
+                        const response = await fetch(`${BASE_URL}/api/v1/user/signup`,{
                           method:"POST",
                           headers:{"Content-Type":"application/json"},
                           body:JSON.stringify({ firstName:firstName,lastName:lastName,email:email,password:password })

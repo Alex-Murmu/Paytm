@@ -6,7 +6,7 @@ import InputBox from '../components/InputBox'
 import PasswordInput from '../components/PasswordInput'
 import Button from '../components/Button'
 import BottomWarning from '../components/BottomWarning'
-const BASE_URL = progress.env.BASE_URL;
+const BASE_URL = process.env.BASE_URL;
 export default function Signin() {
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")

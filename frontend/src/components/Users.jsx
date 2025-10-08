@@ -9,8 +9,10 @@ export default function Users({}) {
    const [Userinput,setUserInput] = useState("");
    const [users,setUsers]= useState();
 
+
     useEffect(async()=>{
-       const response = await fetch(`${BASE_URL}/api/v1/user/bulk`)       
+        const token = localStorage.getItem("token");
+       const response = await fetch(`${BASE_URL}/api/v1/user/bulk/${Userinput}`)       
     })
  
   return (
